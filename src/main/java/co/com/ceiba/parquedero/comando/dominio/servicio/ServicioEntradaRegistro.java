@@ -1,16 +1,16 @@
 package co.com.ceiba.parquedero.comando.dominio.servicio;
 
-import co.com.ceiba.parquedero.comando.dominio.mensajevalidacion.ConstanteRegistroServicio;
+import co.com.ceiba.parquedero.comando.dominio.configuracion.constante.ConstanteRegistroServicio;
 import co.com.ceiba.parquedero.comando.dominio.modelo.Registro;
 import co.com.ceiba.parquedero.comando.dominio.puerto.PuertoRepositorioRegistro;
 
 import java.util.Calendar;
 import java.util.Date;
 
-public class EntradaRegistroServicio {
+public class ServicioEntradaRegistro {
     private PuertoRepositorioRegistro puertoRepositorioRegistro;
 
-    public EntradaRegistroServicio(PuertoRepositorioRegistro puertoRepositorioRegistro){
+    public ServicioEntradaRegistro(PuertoRepositorioRegistro puertoRepositorioRegistro){
         this.puertoRepositorioRegistro = puertoRepositorioRegistro;
     }
 

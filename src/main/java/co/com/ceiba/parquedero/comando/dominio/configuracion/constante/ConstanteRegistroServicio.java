@@ -1,4 +1,4 @@
-package co.com.ceiba.parquedero.comando.dominio.mensajevalidacion;
+package co.com.ceiba.parquedero.comando.dominio.configuracion.constante;
 
 public final class ConstanteRegistroServicio {
 

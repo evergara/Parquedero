@@ -1,6 +1,6 @@
 package co.com.ceiba.parquedero.comando.dominio.modelo;
 
-import co.com.ceiba.parquedero.comando.dominio.mensajevalidacion.ConstanteRegistro;
+import co.com.ceiba.parquedero.comando.dominio.configuracion.constante.ConstanteRegistro;
 
 import java.util.Date;
 
@@ -13,8 +13,9 @@ public class Registro {
     private Date fechaLlegada;
     private Date fechaSalida;
     private Long valor;
+    private boolean estado;
 
-    public Registro(Integer id, String placa, String tipoVehiculo, Integer cilindraje, Date fechaLlegada, Date fechaSalida, Long valor) {
+    public Registro(Integer id, String placa, String tipoVehiculo, Integer cilindraje, Date fechaLlegada) {
         ValidarArgumento.validarPlaca(placa, ConstanteRegistro.MENSAJE_PLACA_REQUERIDA);
         ValidarArgumento.validarTipoVehiculoEsRequerido(tipoVehiculo, ConstanteRegistro.MESNSAJE_TIPO_VEHICULO_ES_REQUERIDO);
 
@@ -30,8 +31,7 @@ public class Registro {
         this.tipoVehiculo = tipoVehiculo;
         this.cilindraje = cilindraje;
         this.fechaLlegada = fechaLlegada;
-        this.fechaSalida = fechaSalida;
-        this.valor = valor;
+        this.estado = true;
     }
 
     public Integer getId() {
@@ -88,5 +88,13 @@ public class Registro {
 
     public void setValor(Long valor) {
         this.valor = valor;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
 }
